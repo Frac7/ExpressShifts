@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
+	_id: {
+		type: Number,
+		required: true
+	},
 	name: {
 		type: String,
 		required: true
@@ -11,4 +15,4 @@ const schema = new mongoose.Schema({
 	}
 });
 
-module.exports = mongoose.model('Product', schema);
+module.exports = mongoose.model('Product', schema, 'product');
