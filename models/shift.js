@@ -15,4 +15,4 @@ const schema = new mongoose.Schema({
 	}
 });
 
-module.exports = mongoose.model('Shift', schema);
+module.exports = mongoose.model('Shift', schema, 'shift');
