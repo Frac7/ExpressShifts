@@ -12,9 +12,10 @@ module.exports = {
 		}
 	},
 	update: async (req, res) => {
-		const _id = req.params.id;
+		const product = req.params.product;
+		const person = req.params.person;
 		try {
-			const shift = await Shifts.findOneAndUpdate({ _id }, {$inc: { count: 1 }});
+			const shift = await Shifts.findOneAndUpdate({ product, person }, {$inc: { count: 1 }});
 			res.status(200).json(shift);
 		} catch (err) {
 			res.status(500).json({ message: err.message });
