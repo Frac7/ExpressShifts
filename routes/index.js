@@ -13,6 +13,7 @@ router.get('/people/:id', people.details);
 
 const shifts = require('./shifts');
 
-router.get('/shifts/:person/:product', shifts);
+router.get('/shift/:person/:product', shifts.get);
+router.post('/shift/:id', shifts.update);
 
 module.exports = router;
