@@ -14,6 +14,6 @@ router.get('/people/:id', people.details);
 const shifts = require('./shifts');
 
 router.get('/shift/:product', shifts.get);
-router.post('/shift/:id', shifts.update);
+router.post('/shift/:product/:person', shifts.update);
 
 module.exports = router;
