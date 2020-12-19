@@ -11,4 +11,8 @@ const people = require('./people');
 router.get('/people', people.list);
 router.get('/people/:id', people.details);
 
+const shifts = require('./shifts');
+
+router.get('/shifts/:person/:product', shifts);
+
 module.exports = router;
