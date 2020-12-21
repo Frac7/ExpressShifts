@@ -17,4 +17,4 @@ server.use(cors());
 const router = require('./routes');
 server.use('/', router);
 
-server.listen(3000, () => console.log('Server started!'));
+server.listen(process.env.PORT, () => console.log('Server started!'));
