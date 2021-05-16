@@ -26,6 +26,6 @@ const update = async (req, res) => {
 }
 
 router.get('/:product', get);
-router.post('/:product/:person', update);
+router.put('/:product/:person', update);
 
 module.exports = router;
